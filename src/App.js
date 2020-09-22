@@ -5,11 +5,8 @@ import './App.css';
 
 
 function App() {
-
   const [data, setData] = useState(null)
   let url = ''
-
-  console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 
   if (process.env.NODE_ENV === 'development') {
     url = 'http://localhost:3001/'
@@ -24,8 +21,7 @@ function App() {
       .then((res) => {
         console.log(res)
         setData(res.message)
-        console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
-      });
+      })
   })
 
   return (
@@ -48,4 +44,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
