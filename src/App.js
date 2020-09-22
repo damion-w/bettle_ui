@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
+
 function App() {
+
+  const [data, setData] = useState(null)
+
+  useEffect(() => {
+    fetch("http://localhost:3001/")
+    // fetch("https://frozen-spire-08641.herokuapp.com/")
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res)
+        setData(res.message)
+        console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
+      });
+  })
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {data}
         </p>
         <a
           className="App-link"
