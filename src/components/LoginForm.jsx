@@ -7,8 +7,7 @@ const handleLoginSubmit = (evt, values) => {
     evt.preventDefault()
 
     console.log(values)
-    //fetch(`${process.env.REACT_APP_API_URI}/login`, {
-    fetch(process.env.REACT_APP_API_URI + '/login', {
+    fetch(`${process.env.REACT_APP_API_URI}/login`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
