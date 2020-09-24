@@ -6,7 +6,7 @@ const LoginForm = ({ setLoggedInStatus }) => {
   const [password, setPassword] = useState("");
 
   function handleLoginSubmit(evt, values) {
-    evt.preventDefault();
+    evt.preventDefault()
 
     fetch(`${process.env.REACT_APP_API_URI}/login`, {
       method: "POST",
@@ -19,30 +19,30 @@ const LoginForm = ({ setLoggedInStatus }) => {
       .then((res) => {
         Auth.authenticateUser(res.token)
         setLoggedInStatus(Auth.isUserAuthenticated())
-      });
-  }
+      })
+    }
 
-  return (
-    <form onSubmit={(evt) => handleLoginSubmit(evt, { username, password })}>
-      <input
-        type="text"
-        name="username"
-        placeholder="Username"
-        value={username}
-        onChange={(evt) => setUsername(evt.target.value)}
-      />
+    return (
+      <form onSubmit={(evt) => handleLoginSubmit(evt, { username, password })}>
+        <input
+          type="text"
+          name="username"
+          placeholder="Username"
+          value={username}
+          onChange={(evt) => setUsername(evt.target.value)}
+        />
 
-      <input
-        type="password"
-        name="password"
-        placeholder="Password"
-        value={password}
-        onChange={(evt) => setPassword(evt.target.value)}
-      />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          value={password}
+          onChange={(evt) => setPassword(evt.target.value)}
+        />
 
-      <input type="submit" value="Log in" />
-    </form>
-  )
+        <input type="submit" value="Log in" />
+      </form>
+    )
 }
 
 export default LoginForm
