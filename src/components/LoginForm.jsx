@@ -15,48 +15,48 @@ const LoginForm = ({ setLoggedInStatus }) => {
       },
       body: JSON.stringify(values),
     })
-      .then((res) => res.json())
-      .then((res) => {
-        Auth.authenticateUser(res.token)
-        setLoggedInStatus(Auth.isUserAuthenticated())
-      })
-    }
+    .then((res) => res.json())
+    .then((res) => {
+      Auth.authenticateUser(res.token)
+      setLoggedInStatus(Auth.isUserAuthenticated())
+    })
+  }
 
-    return (
-      <div className="login-form">
-        <form
-          onSubmit={(evt) => handleLoginSubmit(evt, { username, password })}
-        >
-          <div className="login-input-group">
-            <div className="login-input">
-              <input
-                type="text"
-                name="username"
-                placeholder="Username"
-                value={username}
-                onChange={(evt) => setUsername(evt.target.value)}
-              />
-            </div>
-          </div>
-
-          <div className="login-input-group">
-            <div className="login-input">
-              <input
-                type="password"
-                name="password"
-                placeholder="Password"
-                value={password}
-                onChange={(evt) => setPassword(evt.target.value)}
-              />
-            </div>
-          </div>
-
+  return (
+    <div className="login-form">
+      <form
+        onSubmit={(evt) => handleLoginSubmit(evt, { username, password })}
+      >
+        <div className="login-input-group">
           <div className="login-input">
-            <button type="submit">Log In</button>
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              value={username}
+              onChange={(evt) => setUsername(evt.target.value)}
+            />
           </div>
-        </form>
-      </div>
-    );
+        </div>
+
+        <div className="login-input-group">
+          <div className="login-input">
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={password}
+              onChange={(evt) => setPassword(evt.target.value)}
+            />
+          </div>
+        </div>
+
+        <div className="login-input">
+          <button type="submit">Log In</button>
+        </div>
+      </form>
+    </div>
+  );
 }
 
 export default LoginForm
