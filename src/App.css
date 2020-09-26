@@ -1,3 +1,8 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
 .App {
   background-image: url('./images/home_background.jpg');
   background-color: #cccccc;
@@ -5,17 +10,17 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* text-align: center; */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: white;
 }
 
-.App-header {
-  min-height: 100vh;
+.login-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .login-input-group {
@@ -54,3 +59,12 @@
   cursor: pointer;
   border-radius: 35px;
 }
+
+/* .dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+} */
