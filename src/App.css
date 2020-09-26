@@ -1,20 +1,14 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-image: url('./images/home_background.jpg');
+  background-color: #cccccc;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* text-align: center; */
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,15 +18,39 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.login-input-group {
+  background-color: rgba(24, 26, 27,0.8);
+  border-radius: 35px;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-input input {
+  color: rgb(211, 207, 201);
+  /* might not need this */
+  background-color: transparent;
+  padding: 10px 0 10px 15px;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  border: none;
+  box-sizing: border-box;
+  background: transparent;
+  font-family: 'Mukta', sans-serif;
+  width: 100%;
+  outline: none;
+}
+
+.login-input button {
+  background-color: rgb(144, 3, 10);
+  color: rgb(232, 230, 227);
+  background: #fc636b;
+  border: none;
+  padding: 11px 15px;
+  text-transform: uppercase;
+  font-family: 'Mukta', sans-serif;
+  width: 100%;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 35px;
 }
