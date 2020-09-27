@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from "react";
-import Auth from "../modules/Auth";
+import React from "react";import Auth from "../modules/Auth";
 import { Redirect } from "react-router-dom";
-import '../../src/App.css'
 
 const Event = (event) => {
   return (
-    <>
+    <div className="event">
       {!Auth.isUserAuthenticated() && <Redirect to="/" />}
-
-      <h2>Hi from Event!</h2>
-      <p>{event.name}</p>
-    </>
+      <div className="event-header">
+        <p>{event.name}</p>
+      </div>
+      <div className="expense">
+          <p>{event.expenses.map((expense) => expense.name)}</p>
+      </div>
+    </div>
   );
 };
 

@@ -29,7 +29,7 @@ const EventList = () => {
     }, [updateEvents]);
 
     return (
-      <>
+      <div className="event-list">
         {!Auth.isUserAuthenticated() && <Redirect to="/" />}
         {myEvents ? (
           myEvents.map((event) => (
@@ -53,7 +53,7 @@ const EventList = () => {
         ) : (
           <p>Loading...</p>
         )}
-      </>
+      </div>
     );
 };
 

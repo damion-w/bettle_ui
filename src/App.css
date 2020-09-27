@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@600&display=swap');
+
 body, html {
   height: 100%;
   margin: 0;
@@ -62,6 +64,7 @@ body, html {
 .dashboard {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background: #edeef0;
   height: 100%;
   min-height: 100vh;
@@ -72,23 +75,36 @@ body, html {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
+  font-family: 'Biryani', sans-serif;
+  color: #383232;
 }
 
 .event-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  width: 95%;
 }
 
-/* 
 .event {
-  background-color: rgba(24, 26, 27,0.8);
-  border-radius: 35px;
-  margin-bottom: 20px;
-} */
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 100%
+}
 
-/* .event-list {
-  background-color: rgb(144, 3, 10);
-} */
+.event-header {
+  display: flex;
+  align-items: center;
+  margin: 0 12px 0 16px;
+  height: auto;
+  width: 100%;
+
+  font-family: 'Biryani', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #D0021B;
+    letter-spacing: -0.4px;
+}
