@@ -129,3 +129,39 @@ body, html {
   margin: 0;
   padding: 0 1vh 0 1vh;
 }
+
+.expense-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.expense {
+  display: flex;
+  justify-content: space-between;
+  padding: .5vh;
+  margin-bottom: 2vh ;
+  border: 1px solid rgba(0,102,204,0.48);
+  border-radius: 40px;
+  color: rgba(0,102,204,0.88);
+  padding: 1vh;
+}
+
+.expense-name {
+  display: flex;
+  justify-content: flex-start;
+  width: 20vh;
+}
+
+.expense-amount {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 10vh;
+}
+
+.expense-date {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}

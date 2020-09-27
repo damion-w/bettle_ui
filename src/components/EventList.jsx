@@ -19,7 +19,6 @@ const EventList = () => {
       })
         .then((res) => res.json())
         .then((res) => {
-          console.log(res);
           setMyEvents(res.events);
           setMyOtherEvents(res.other_events)
         });

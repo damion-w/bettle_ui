@@ -16,11 +16,9 @@ const Event = (event) => {
           </div>
         </div>
       </div>
-      <div className="expense">
-        <ExpenseList expenses={event.expenses} />
-      </div>
+      <ExpenseList expenses={event.expenses} />
     </div>
-  );
-};
+  )
+}
 
 export default Event
