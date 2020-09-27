@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&display=swap');
 
 body, html {
   height: 100%;
@@ -92,19 +92,40 @@ body, html {
   background: #fff;
   border-radius: 10px;
   margin-bottom: 10px;
-  width: 100%
+  width: 100%;
+  padding: 0 15px 0 15px;
 }
 
 .event-header {
   display: flex;
   align-items: center;
-  margin: 0 12px 0 16px;
-  height: auto;
+  justify-content: space-between;
   width: 100%;
+}
 
+.event-title {
   font-family: 'Biryani', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    color: #D0021B;
-    letter-spacing: -0.4px;
+  font-weight: 500;
+  font-size: 20px;
+  color: #D0021B;
+  letter-spacing: -0.4px;
+}
+
+.date-bubble {
+  display: flex;
+  background: #B7B7B7;
+  border-radius: 40px;
+}
+
+.event-date {
+  display: flex;
+  font-family: 'Biryani', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #FEFEFE;
+}
+
+.event-date p {
+  margin: 0;
+  padding: 0 1vh 0 1vh;
 }

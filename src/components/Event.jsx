@@ -6,10 +6,17 @@ const Event = (event) => {
     <div className="event">
       {!Auth.isUserAuthenticated() && <Redirect to="/" />}
       <div className="event-header">
-        <p>{event.name}</p>
+        <div className="event-title">
+          <p>{event.name}</p>
+        </div>
+        <div className="date-bubble">
+          <div className="event-date">
+            <p>{event.date}</p>
+          </div>
+        </div>
       </div>
       <div className="expense">
-          <p>{event.expenses.map((expense) => expense.name)}</p>
+        <p>{event.expenses.map((expense) => expense.name)}</p>
       </div>
     </div>
   );
