@@ -13,18 +13,18 @@ function App() {
   }
 
   return (
-    <div className="App">
-        <BrowserRouter>
-          <Route exact path="/">
-            {!isLoggedIn ? (
-                <LoginForm setLoggedInStatus={setLoggedInStatus} />
-            ) : (
-              <Redirect to="/dashboard" />
-            )}
-          </Route>
-          <Route exact path="/dashboard" component={Dashboard} />
-        </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Route exact path="/">
+        {!isLoggedIn ? (
+          <div className="login-page">
+            <LoginForm setLoggedInStatus={setLoggedInStatus} />
+          </div>
+        ) : (
+          <Redirect to="/dashboard" />
+        )}
+      </Route>
+      <Route exact path="/dashboard" component={Dashboard} />
+    </BrowserRouter>
   );
 }
 

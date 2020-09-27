@@ -3,7 +3,7 @@ body, html {
   margin: 0;
 }
 
-.App {
+.login-page {
   background-image: url('./images/home_background.jpg');
   background-color: #cccccc;
   height: 100%;
@@ -31,7 +31,6 @@ body, html {
 
 .login-input input {
   color: rgb(211, 207, 201);
-  /* might not need this */
   background-color: transparent;
   padding: 10px 0 10px 15px;
   font-size: 17px;
@@ -60,11 +59,36 @@ body, html {
   border-radius: 35px;
 }
 
-/* .dashboard {
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  background: #edeef0;
+  height: 100%;
   min-height: 100vh;
+}
+
+.dashboard-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.event-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+}
+
+/* 
+.event {
+  background-color: rgba(24, 26, 27,0.8);
+  border-radius: 35px;
+  margin-bottom: 20px;
+} */
+
+/* .event-list {
+  background-color: rgb(144, 3, 10);
 } */
