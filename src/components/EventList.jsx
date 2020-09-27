@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Auth from "../modules/Auth";
 import { Redirect } from "react-router-dom";
+import Event from './Event'
 
 const EventList = () => {
     const [myEvents, setMyEvents] = useState(false)
@@ -28,19 +29,31 @@ const EventList = () => {
     }, [updateEvents]);
 
     return (
-      <div className="event-list">
+      <>
         {!Auth.isUserAuthenticated() && <Redirect to="/" />}
         {myEvents ? (
-          myEvents.map((events) => events.name)
+          myEvents.map((event) => (
+            <Event
+              key={event.id}
+              {...event}
+              setUpdateEvents={setUpdateEvents}
+            />
+          ))
         ) : (
           <p>Loading...</p>
         )}
         {myOtherEvents ? (
-          myOtherEvents.map((events) => events.name)
+          myOtherEvents.map((event) => (
+            <Event
+              key={event.id}
+              {...event}
+              setUpdateEvents={setUpdateEvents}
+            />
+          ))
         ) : (
           <p>Loading...</p>
         )}
-      </div>
+      </>
     );
 };
 
