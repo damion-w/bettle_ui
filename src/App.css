@@ -165,3 +165,35 @@ body, html {
   flex-direction: row;
   justify-content: left;
 }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+nav {
+  width: 100%;
+  background: #edeef0;
+  padding: 0 20px 0 20px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  list-style-type:none;
+}
+
+nav ul li a {
+  font-family: 'Biryani', sans-serif;
+  font-size: 13px;
+  line-height: 14px;
+  color: #313130;
+  font-weight: 400;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  padding: 1vh;
+}
