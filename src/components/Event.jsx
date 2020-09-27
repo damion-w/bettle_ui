@@ -1,5 +1,6 @@
 import React from "react";import Auth from "../modules/Auth";
 import { Redirect } from "react-router-dom";
+import ExpenseList from './ExpenseList'
 
 const Event = (event) => {
   return (
@@ -16,7 +17,7 @@ const Event = (event) => {
         </div>
       </div>
       <div className="expense">
-        <p>{event.expenses.map((expense) => expense.name)}</p>
+        <ExpenseList expenses={event.expenses} />
       </div>
     </div>
   );
