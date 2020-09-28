@@ -3,6 +3,7 @@
 body, html {
   height: 100%;
   margin: 0;
+  background: #edeef0;
 }
 
 .login-page {
@@ -18,7 +19,7 @@ body, html {
   color: white;
 }
 
-.login-form {
+.login-form, .add-event-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,7 +62,7 @@ body, html {
   border-radius: 35px;
 }
 
-.dashboard {
+.dashboard, .add-event-main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,11 +80,12 @@ body, html {
   color: #383232;
 }
 
-.event-list {
+.event-list, .add-event-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 95%;
+  max-width: 65vw;
 }
 
 .event {
@@ -98,9 +100,12 @@ body, html {
 
 .event-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
+}
+
+.event-header {
+  justify-content: space-between;
+  align-items: center;
 }
 
 .event-title {
@@ -174,7 +179,6 @@ body, html {
 
 nav {
   width: 100%;
-  background: #edeef0;
   padding: 0 20px 0 20px;
 }
 
@@ -196,4 +200,41 @@ nav ul li a {
   display: block;
   position: relative;
   padding: 1vh;
+}
+
+.add-event-button {
+  background-color: rgb(144, 3, 10);
+  color: rgb(232, 230, 227);
+  background: #fc636b;
+  border: none;
+  padding: 11px 15px;
+  text-transform: uppercase;
+  font-family: 'Mukta', sans-serif;
+  width: 100%;
+  margin-bottom: 4vh;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 35px;
+}
+
+.add-event-header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.add-event-header h2 {
+    font-family: 'Biryani', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    color: #D0021B;
+    letter-spacing: -0.5px;
+}
+
+.add-event-form-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Biryani', sans-serif;
+  color: #383232;
 }
