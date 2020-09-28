@@ -204,9 +204,8 @@ nav ul li a {
 }
 
 .add-event-button {
-  background-color: rgb(144, 3, 10);
+  background: #1927ba;
   color: rgb(232, 230, 227);
-  background: #fc636b;
   border: none;
   padding: 11px 15px;
   text-transform: uppercase;
@@ -224,18 +223,56 @@ nav ul li a {
   width: 100%;
 }
 .add-event-header h2 {
-    font-family: 'Biryani', sans-serif;
-    font-weight: 300;
-    font-size: 25px;
-    color: #D0021B;
-    letter-spacing: -0.5px;
+  font-family: 'Biryani', sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  color: #D0021B;
+  letter-spacing: -0.5px;
 }
 
 .add-event-form-title {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  
   font-family: 'Biryani', sans-serif;
   color: #383232;
+}
+
+.event-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-expense-button {
+  display: flex;
+  color: #3677CB;
+  background: #d5e2f3;
+  border: none;
+  padding: 11px 15px;
+  text-transform: uppercase;
+  font-family: 'Mukta', sans-serif;
+  margin-bottom: 4vh;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 35px;
+}
+
+.delete-expense-button {
+  display: flex;
+  color: #FFFFFF;
+  background: #ff0800;
+  border: none;
+  padding: 11px 15px;
+  text-transform: uppercase;
+  font-family: 'Mukta', sans-serif;
+  margin-bottom: 4vh;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 35px;
+}
+
+a {
+  text-decoration: none;
 }
