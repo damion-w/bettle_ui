@@ -4,26 +4,45 @@ import './App.css'
 import Auth from './modules/Auth'
 import Dashboard from './components/Dashboard'
 import LoginForm from './components/LoginForm'
+import EventForm from "./components/EventForm";
 
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(Auth.isUserAuthenticated());
-  
-  function setLoggedInStatus (value) {
-    setLoggedIn(value)
-  }
+  const [shouldUpdateEvents, setShouldUpdateEvents] = useState(false);
 
   return (
     <BrowserRouter>
       <Route exact path="/">
         {!isLoggedIn ? (
           <div className="login-page">
-            <LoginForm setLoggedInStatus={setLoggedInStatus} />
+            <LoginForm setLoggedInStatus={(isLoggedIn, setLoggedIn)} />
           </div>
         ) : (
-          <Redirect to="/dashboard" />
+          <div>
+            <Redirect to="/dashboard" />
+          </div>
         )}
       </Route>
-      <Route exact path="/dashboard" component={Dashboard} />
+      <Route
+        exact
+        path="/dashboard"
+        render={() => (
+          <Dashboard
+            shouldUpdateEvents={shouldUpdateEvents}
+            setShouldUpdateEvents={setShouldUpdateEvents}
+          />
+        )}
+      />
+      <Route
+        exact
+        path="/eventform"
+        render={() => (
+          <EventForm
+            setShouldUpdateEvents={setShouldUpdateEvents}
+          />
+        )}
+      >
+      </Route>
     </BrowserRouter>
   );
 }
