@@ -168,7 +168,8 @@ body, html {
 .expense-date {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: flex-end;
+  width: 20vh
 }
 
 .header {
